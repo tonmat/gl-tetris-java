@@ -61,7 +61,7 @@ public class App {
     private static Sprite createBGSprite() {
         final Sprite sprite = new Sprite();
         sprite.textureRegion = texture.region(0, 64, 1, 1);
-        sprite.color.set(.9f, .95f, .9f);
+        sprite.color.set(1, 1, 1);
         return sprite;
     }
 
