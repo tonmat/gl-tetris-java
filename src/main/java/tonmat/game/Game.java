@@ -5,14 +5,13 @@ public class Game {
 
     static {
         SHAPES = new Shape[]{
-//                new Shape(4, 0b0000111100000000),
-//                new Shape(3, 0b111001000),
-//                new Shape(3, 0b001111000),
-//                new Shape(3, 0b100111000),
-//                new Shape(3, 0b110011000),
-//                new Shape(3, 0b011110000),
-//                new Shape(2, 0b1111),
-                new Shape(4, 0b1111111111111111),
+                new Shape(4, 0b0000111100000000),
+                new Shape(3, 0b111001000),
+                new Shape(3, 0b001111000),
+                new Shape(3, 0b100111000),
+                new Shape(3, 0b110011000),
+                new Shape(3, 0b011110000),
+                new Shape(2, 0b1111),
         };
     }
 
