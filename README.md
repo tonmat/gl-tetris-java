@@ -1,5 +1,5 @@
 # gl-tetris-java
-A simple tetris game using LWJGL
+A simple tetris game using LWJGL3
 
 ## Run
 
