@@ -1,5 +1,7 @@
 package tonmat.game;
 
+import java.util.Arrays;
+
 public class Board {
     public final int width;
     public final int height;
@@ -12,8 +14,7 @@ public class Board {
     }
 
     public void reset() {
-        for (int i = 0; i < rows.length; i++)
-            rows[i] = 0;
+        Arrays.fill(rows, 0);
     }
 
     public void setCell(int x, int y, boolean cell) {
@@ -24,12 +25,12 @@ public class Board {
     }
 
     public boolean isFullRow(int y) {
-        return rows[y] == (1 << width) - 1;
+        return y >= 0 && y < height && rows[y] == (1 << width) - 1;
     }
 
     public void removeRow(int y) {
-        for (int i = 0; i < height; i++)
-            rows[i] = rows[i + 1];
+        if (y >= 0 && y < height)
+            System.arraycopy(rows, y + 1, rows, y, height - y);
     }
 
     public boolean hasCell(int x, int y) {
@@ -73,7 +74,8 @@ public class Board {
                     continue;
                 setCell(bx, by, true);
             }
-            if (by >= 0 && by < height && isFullRow(by))
+
+            if (isFullRow(by))
                 rows++;
         }
         return rows;
